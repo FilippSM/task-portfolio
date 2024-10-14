@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import photo from "./../../assets/images/Photo.jpg"
-import { FlexWrapper } from "../../components/FlexWrapper";
+import photo from "./../../../assets/images/Photo.jpg"
+import { FlexWrapper } from "../../../components/FlexWrapper";
 
 export const Main = () => {
     return (
