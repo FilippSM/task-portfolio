@@ -4,22 +4,20 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 
 export const Main = () => {
     return (
-        <div>
-            <StyledMain>
-                <FlexWrapper align={"center"} justify={"space-around"}>
-                    <div>
-                        <span>Hi There</span>
-                        <Name>I'm Filipp Samsonau</Name>
-                        <MainTitle>A web Developer.</MainTitle>
-                    </div>
-                    <Photo src={photo} alt="" />
-                </FlexWrapper>
-            </StyledMain>
-        </div>
+        <StyledMain>
+            <FlexWrapper align={"center"} justify={"space-around"}>
+                <div>
+                    <span>Hi There</span>
+                    <Name>I'm Filipp Samsonau</Name>
+                    <MainTitle>A web Developer.</MainTitle>
+                </div>
+                <Photo src={photo} alt="" />
+            </FlexWrapper>
+        </StyledMain>
     );
 };
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
     min-height: 100vh;
     background-color: #c6b6b6;
 `

@@ -29,7 +29,7 @@ export const Footer = () => {
                     </SocialLink>
                 </SocialItem>
             </SocialList>
-            <CopyRight>© 2023 Svetlana Dyablo, All Rights Reserved.</CopyRight>
+            <CopyRight>© 2024 Filipp Samsonau, All Rights Reserved.</CopyRight>
             </FlexWrapper>
         </StyledFooter>
 
