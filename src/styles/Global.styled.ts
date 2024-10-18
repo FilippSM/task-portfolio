@@ -37,6 +37,10 @@ button {
     border: none;
 }
 
+section {
+    padding: 100px 0;
+}
+
 section:nth-of-type(odd) { //для всех четных секций
     background-color: ${theme.colors.primaryBg};
 }
