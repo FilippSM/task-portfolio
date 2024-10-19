@@ -26,6 +26,7 @@ body {
 //сброс стилей для некоторых элементов
 a {
     text-decoration: none;
+    color: ${theme.colors.font};
 }
 
 ul {
@@ -35,6 +36,8 @@ ul {
 button {
     background-color: unset;
     border: none;
+    cursor: pointer;
+    color: ${theme.colors.font};
 }
 
 section {
@@ -47,6 +50,19 @@ section:nth-of-type(odd) { //для всех четных секций
 
 section:nth-of-type(even) { //для всех не четных секций
     background-color: ${theme.colors.secondaryBg};
+}
+
+h3 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+}
+
+p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
 }
 `
 
