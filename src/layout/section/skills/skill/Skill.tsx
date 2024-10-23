@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { theme } from "../../../../styles/Theme";
 
 type SkillPropsType = {
     iconId: string
@@ -23,8 +24,16 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-    width: 380px;
+    width: 330px;
     padding: 62px 20px 40px;
+
+    //адаптив
+    //каждый скил занимает все свободное пространство по ширине
+    flex-grow: 1;
+
+    @media ${theme.media.mobile} {
+        padding: 62px 0px 40px;
+    }
 `
 
 export const IconWrapper = styled.div`
