@@ -13,14 +13,16 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  margin: 0;
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', //"Poppins" - указали подключенной стиль которого больше всего на проекте
+    margin: 0;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', //"Poppins" - указали подключенной стиль которого больше всего на проекте
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: ${theme.colors.font};
-  line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: ${theme.colors.font};
+    line-height: 1.2;
+
+    min-width: 360px; //(360 -ширина  макета для мобилки из макета) фиксит появление горизонтального скрола и появление смещениия элементов при минимальном разрешении после 360 происходит пропорцтональное уменьшение элементов
 }
 
 //сброс стилей для некоторых элементов
