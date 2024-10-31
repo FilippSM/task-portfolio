@@ -19,6 +19,7 @@ export const Slogan: React.FC = () => {
 };
 
 const StyledSlogan = styled.section`
+    position: relative; //скрытие текстуры от библиотеки
     min-height: 30vh;
     background-color: #ee8eb0;
 `

@@ -24,6 +24,7 @@ export const Testimony: React.FC = () => {
 };
 
 const StyledTestimony = styled.section`
+    position: relative; //скрытие текстуры от библиотеки
     min-height: 50vh;
     background-color: #aeb9ff;
 

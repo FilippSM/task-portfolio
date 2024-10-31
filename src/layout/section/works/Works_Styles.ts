@@ -5,7 +5,8 @@ import { Link } from "../../../components/Link"
 import { Button } from "../../../components/Button"
 
 //Works
-const Works = styled.section` 
+const Works = styled.section`
+    position: relative; //скрытие текстуры от библиотеки
     ${FlexWrapper} {
         gap: 30px;
     }
