@@ -3,6 +3,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import {S} from "./Main_Styles"
 import React from "react";
+import Typewriter from 'typewriter-effect';
 
 export const Main: React.FC = () => {
     return (
