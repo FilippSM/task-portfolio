@@ -7,5 +7,5 @@ export const Logo = () => {
         <a onClick={()=>{scroll.scrollToTop()}}>
             <Icon iconId={"codeSvg"}/>
         </a>
-    )
-}
+    );
+};
