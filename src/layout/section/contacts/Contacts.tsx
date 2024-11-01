@@ -7,7 +7,7 @@ import {S} from "./Contact_Styles"
 
 export const Contact = () => {
     return (
-        <S.Contacts>
+        <S.Contacts id={"contact"}> {/* для якорной ссылки */}
             <Container>
                 <SectionTitle>Contact</SectionTitle>
                 <S.Form>

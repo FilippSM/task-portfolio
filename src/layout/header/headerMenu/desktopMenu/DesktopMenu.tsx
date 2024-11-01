@@ -1,10 +1,10 @@
 import { Menu } from "../menu/Menu";
 import {S} from "./../HeaderMenu_Styles"
 
-export const DekstopMenu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
+export const DekstopMenu: React.FC = () => {
     return (
         <S.DesktopMenu>
-            <Menu menuItems={props.menuItems}/>
+            <Menu />
             {/* <ul>
                 {props.menuItems.map((item, index) => {
                     return <ListItem key={index}>

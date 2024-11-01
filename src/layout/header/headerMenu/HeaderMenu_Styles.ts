@@ -1,14 +1,13 @@
 import styled, { css } from "styled-components"
 import { theme } from "../../../styles/Theme"
+import { Link } from "react-scroll"
 
 
-const Link = styled.a`
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 400;
-    font-size: 30px;
-    text-align: center;
-    color: transparent; //скрывает ссылку
+const MenuItem = styled.li`
+    position: relative;
 `
+
+
 const Mask = styled.span`
     position: absolute;
     top: 0;
@@ -29,27 +28,31 @@ const Mask = styled.span`
     }
 `
 
-const MenuItem = styled.li`
-    position: relative;
+const NavLink = styled(Link)` //создание пропсов на базе компонента Link из библиотеки react-scroll
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    color: transparent; //скрывает ссылку
 
-    //пседвоэлемент полоса на словах
-&::before {
-    content: "";
-    display: inline-block;
-    height: 3px;
-    background-color: ${theme.colors.accent};
+     //пседвоэлемент полоса на словах
+    &::before {
+        content: "";
+        display: inline-block;
+        height: 3px;
+        background-color: ${theme.colors.accent};
 
-    position: absolute;
-    top: 50%;
-    left: -10px;
-    right: -10px;
-    z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        right: -10px;
+        z-index: 1;
 
-    transform: scale(0); //скрытие полосы 
-}
+        transform: scale(0); //скрытие полосы 
+    }
 
-
-    &:hover {
+    
+    &:hover, &.active { /* &.active - означает когда у Link будет класс active к не мутоже бубут применены стили*/
         &::before {
             transform: scale(1);//появление при наведении
         }
@@ -64,8 +67,8 @@ const MenuItem = styled.li`
             }
         }
     }
-
 `
+
 
 //MobileMenu
 const MobileMenu = styled.nav`
@@ -169,7 +172,7 @@ const DesktopMenu = styled.nav`
 `
 
 export const S = {
-    Link,
+    NavLink,
     MenuItem,
     Mask,
     MobileMenu,

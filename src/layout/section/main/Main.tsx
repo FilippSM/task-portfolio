@@ -8,7 +8,7 @@ import Tilt from 'react-parallax-tilt';
 
 export const Main: React.FC = () => {
     return (
-        <S.Main>
+        <S.Main id={"home"}>
             <Container>
                 <FlexWrapper align={"center"} justify={"space-around"} wrap={"wrap"}> {/* фото и текст при уменьшении экрана центрируются  было space-between*/}
                     <div>
