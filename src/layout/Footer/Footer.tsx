@@ -1,5 +1,5 @@
-import { Icon } from "../../components/icon/Icon";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { Icon } from "../../components/icon/Icon";
 import {S} from "./Footer_Styles"
 import React from "react";
 
