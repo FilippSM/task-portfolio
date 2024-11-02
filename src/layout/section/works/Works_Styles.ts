@@ -3,6 +3,7 @@ import { theme } from "../../../styles/Theme"
 import { FlexWrapper } from "../../../components/FlexWrapper"
 import { Link } from "../../../components/Link"
 import { Button } from "../../../components/Button"
+import { motion } from "framer-motion"
 
 //Works
 const Works = styled.section`
@@ -15,8 +16,8 @@ const Works = styled.section`
 
 const Work = styled.div`
     background-color: ${theme.colors.secondaryBg};
-    width: 330px;// 330px - срабатывает когда раотает свойство wrap при этом блоки скидываются друг под друга
-    flex-grow: 1;
+    /* width: 330px;// 330px - срабатывает когда раотает свойство wrap при этом блоки скидываются друг под друга
+    flex-grow: 1; */
 
     ${Link} {
         padding: 10px 0;
@@ -26,9 +27,9 @@ const Work = styled.div`
         }
     }
 
-    @media ${theme.media.dekstop} {
+    /* @media ${theme.media.dekstop} {
         max-width: 540px;
-    }
+    } */
 `
 
 const ImageWrapper = styled.div`

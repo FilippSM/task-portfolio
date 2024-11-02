@@ -8,6 +8,7 @@ import timerImg from "./../../../assets/images/Proj-2.png"
 import { Container } from "../../../components/Container";
 import React, { useState } from "react";
 import {S} from "./Works_Styles";
+import { AnimatePresence, motion } from "framer-motion" /* framer-motion - библиотека анимация в реакте*/
 
 /* const tabsItems = ["All", "landing Page", "React", "spa"] */
 const tabsItems: Array<{status: TabsStatusType, title: string}> = [
@@ -36,13 +37,43 @@ const worksData = [
         title: "Social Network",
         src: socialImg,
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        type: "spa"
+        type: "spa",
+        id: 1
     },
     {
         title: "Timer",
         src: timerImg,
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-         type: "react"
+        type: "react",
+        id: 2
+    },
+    {
+        title: "Social Network",
+        src: socialImg,
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        type: "spa",
+        id: 3
+    },
+    {
+        title: "Timer",
+        src: timerImg,
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        type: "react",
+        id: 4
+    },
+    {
+        title: "Social Network",
+        src: socialImg,
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        type: "spa",
+        id: 5
+    },
+    {
+        title: "Timer",
+        src: timerImg,
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        type: "react",
+        id: 6
     },
 ]
 
@@ -70,15 +101,27 @@ export const Works: React.FC = () => {
                 <SectionTitle>My Works</SectionTitle>
                 <TabMenu tabsItems={tabsItems} changeFilterStatus={changeFilterStatus} currentFilterStatus={currentFilterStatus}/>
                 <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"}> {/* align={"flex-start"} сколько бы не было контента блочки подстраиваются под контент */}
+                
+                <AnimatePresence>
+                    {filtredWorks.map((w) => {
+                        return (
+                            <motion.div style={{width: "400px", flexGrow: 1, maxWidth: "540px"}}
+                            layout
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }} 
+                            key={w.id}
 
-                    {filtredWorks.map((w, index) => {
-                        return <Work key={index}
-                            title={w.title}
-                            src={w.src}
-                            text={w.text}
-                        />
+                            >  {/* обернуто дивкой которая будет анимироваться  */}     
+                                <Work key={w.id}
+                                title={w.title}
+                                src={w.src}
+                                text={w.text}
+                                /> 
+                            </motion.div>          
+                        )
                     })}
-
+                </AnimatePresence>
                    {/*  <Work title={"Social Network"}
                         src={socialImg}
                         text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."}
@@ -87,6 +130,7 @@ export const Works: React.FC = () => {
                         src={timerImg}
                         text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim"}
                     /> */}
+
                 </FlexWrapper>
             </Container>
         </S.Works>
