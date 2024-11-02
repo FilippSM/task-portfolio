@@ -1,8 +1,9 @@
-import { FlexWrapper } from "../../../components/FlexWrapper"
-import { SectionTitle } from "../../../components/SectionTitle"
+import { FlexWrapper } from "../../../components/FlexWrapper";
+import { SectionTitle } from "../../../components/SectionTitle";
 import { Skill } from './skill/Skill';
 import { Container } from "../../../components/Container";
-import {S} from "./Skills_Styles"
+import {S} from "./Skills_Styles";
+import { Fade } from "react-awesome-reveal"; //бибилиотека анамиция на скролле
 
 const skillData = [
     {
@@ -44,15 +45,14 @@ export const Skills = () => {
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
                 <FlexWrapper wrap={"wrap"} justify={"space-between"}>
-
-
-                    {skillData.map((s, index) => {
-                        return <Skill key = {index}
-                            iconId={s.iconId}
-                            title={s.title}
-                            decription={s.decription} />
-                    })}
-
+                    <Fade cascade={true} damping={0.2}> {/* плавное появление с задержкой 0.2 */}
+                        {skillData.map((s, index) => {
+                            return <Skill key = {index}
+                                iconId={s.iconId}
+                                title={s.title}
+                                decription={s.decription} />
+                        })}
+                    </Fade>
                    {/*  <Skill
                         iconId={"codeSvg"}
                         title={"html5"}
