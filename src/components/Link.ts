@@ -26,6 +26,8 @@ export const Link = styled.a<{active?: boolean}>`
         left: 0;
         right: -0;
         z-index: -1;
+        height: 0; //чтобы сработала анамация
+        transition: ${theme.animations.transition};
 
         //активный таб отрисовка
         ${props => props.active && css<{active?: boolean}>`

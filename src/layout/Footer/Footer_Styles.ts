@@ -32,6 +32,7 @@ display: flex; //задан флекс чтобы применислись ст�
 justify-content: center;
 align-items: center;
 
+transition: ${theme.animations.transition};
 color: ${theme.colors.accent}; //цвет иконок по умолчанию, для срабатывания в спрайте иконок должно быть подписано: fill="currentColor
 
 &:hover {

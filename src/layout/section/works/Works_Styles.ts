@@ -39,7 +39,8 @@ const ImageWrapper = styled.div`
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -40%);
+        transition: ${theme.animations.transition};
 
         //псевдоэлемент полностью покрывает кнопку
         &::before {
@@ -50,14 +51,15 @@ const ImageWrapper = styled.div`
 
     &::before {
         content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        backdrop-filter: blur(8px); //блюр
-        background: rgba(0, 0, 0, 0.3);
-        opacity: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            backdrop-filter: blur(8px); //блюр
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: ${theme.animations.transition}
         }
 
     &:hover {
@@ -68,6 +70,7 @@ const ImageWrapper = styled.div`
         //пояление кнопки
         ${Button} {
             opacity: 1;
+            transform: translate(-50%, -50%); //кнопка немного выезжает наверх
         }
     }
 
