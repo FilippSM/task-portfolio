@@ -38,7 +38,7 @@ const Field = styled.input`
 
     //изменеие оутлайна браузеровского
     &:focus-visible {
-        outline: 1px solid ${theme.colors.borderColor};;
+        outline: 1px solid ${theme.colors.borderColor};
     }
 `
 export const S = {
